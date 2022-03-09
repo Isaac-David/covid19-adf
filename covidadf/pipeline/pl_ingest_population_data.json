@@ -117,9 +117,16 @@
 			},
 			{
 				"name": "If Column Count Matches",
-				"description": "If Column Count Matches",
+				"description": "If Column Count from source matches the column count in Destination. This allow us to know if there is any changes in the file metadata that will affect any processes. ",
 				"type": "IfCondition",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Get File Metadata",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"userProperties": []
 			}
 		],
