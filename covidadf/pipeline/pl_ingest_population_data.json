@@ -1,9 +1,9 @@
 {
-	"name": "covid pipeline",
+	"name": "pl_ingest_population_data",
 	"properties": {
 		"activities": [
 			{
-				"name": "pl_ingest_population_data",
+				"name": "Copy Population Data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
