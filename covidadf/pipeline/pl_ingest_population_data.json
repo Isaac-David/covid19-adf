@@ -85,6 +85,7 @@
 			},
 			{
 				"name": "Get File Metadata",
+				"description": "Used to get the metadata of the file such as size, if file exists, column count etc ",
 				"type": "GetMetadata",
 				"dependsOn": [],
 				"policy": {
@@ -100,7 +101,11 @@
 						"referenceName": "ds_population_raw_gz",
 						"type": "DatasetReference"
 					},
-					"fieldList": [],
+					"fieldList": [
+						"columnCount",
+						"size",
+						"exists"
+					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
 						"enablePartitionDiscovery": false
@@ -109,6 +114,13 @@
 						"type": "DelimitedTextReadSettings"
 					}
 				}
+			},
+			{
+				"name": "If Column Count Matches",
+				"description": "If Column Count Matches",
+				"type": "IfCondition",
+				"dependsOn": [],
+				"userProperties": []
 			}
 		],
 		"annotations": []
