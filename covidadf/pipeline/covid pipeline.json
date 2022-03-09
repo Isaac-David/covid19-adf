@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy Population Data",
+				"name": "pl_ingest_population_data",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
