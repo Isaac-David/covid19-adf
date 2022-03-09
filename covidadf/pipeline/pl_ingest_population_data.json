@@ -4,6 +4,7 @@
 		"activities": [
 			{
 				"name": "Copy Population Data",
+				"description": "This copy activity will be used to copy the data from one end to another.",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
